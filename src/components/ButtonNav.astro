@@ -1,0 +1,31 @@
+---
+interface Props {
+  src: string;
+  isInactive?: boolean;
+}
+const { src, isInactive } = Astro.props;
+---
+<a
+    href={src}
+    class:list={[
+      "relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-0.5 focus:outline-none",
+      { "active:scale-100": isInactive },
+    ]}
+  >
+    <span
+      class:list={[
+        "absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]",
+        { "opacity-30 animate-none": isInactive },
+      ]}
+    >
+    </span>
+    <span
+      class:list={[
+        "inline-flex h-full w-full items-center justify-center rounded-lg px-7 font-medium backdrop-blur-3xl gap-2 undefined",
+        { "text-gray-400 cursor-not-allowed disabled": isInactive },
+        {"text-white cursor-pointer" : !isInactive },
+      ]}
+    >
+      <slot />
+    </span>
+</a>

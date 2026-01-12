@@ -1,0 +1,24 @@
+---
+interface Props {
+    active?: boolean;
+}
+const { active } = Astro.props;
+---
+<div class:list={[
+    "size-25 bg-pink-200 rounded-full flex justify-center items-center p-3 drop-shadow-[0_0_8px_rgba(211,144,194,0.5),0_0_8px_#000] card-icon-container",
+    {"animate-flicker" : active}
+    ]}>
+    <slot />
+</div>
+
+<style>
+    .card-icon-container:has(.checkbox:checked) {
+        animation-play-state: paused !important;
+    }
+    .checkbox:checked {
+        animation-play-state: paused;
+    }
+    .container:has(.checkbox:checked) {
+        animation-play-state: paused;
+    }
+</style>

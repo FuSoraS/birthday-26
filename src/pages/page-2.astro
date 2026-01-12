@@ -1,0 +1,17 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Letter from "@components/Letter.astro";
+import { ButtonWelcome } from "@components/ButtonWelcome";
+import AllButtonNav from "@components/AllButtonNav.astro";
+---
+
+<Layout title="Carta" description="">
+	<div class="hidden">
+		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
+	</div>
+	<article class="h-dvh grid justify-center content-center gap-10">
+		<Letter />
+		
+		<AllButtonNav src1="/page-1" src2="" isInactive={true} />
+	</article>
+</Layout>

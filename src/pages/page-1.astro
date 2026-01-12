@@ -1,0 +1,58 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { ButtonWelcome } from "@components/ButtonWelcome.jsx";
+import { PlayTetoBirthday } from "@components/PlayTetoBirthday.jsx";
+import AllButtonNav from "@components/AllButtonNav.astro";
+import CardIcon from "@components/IconCircle.astro";
+import { NAME } from "@src/config";
+import ButtonModal from "@src/components/ButtonModal.astro";
+import CardMusic from "@components/CardMusic.astro";
+---
+
+<Layout
+	title={`Feliz cumpleaños, ${NAME}`}
+	description={`Un sitio web de deseos de cumpleaños hecho para ${NAME}.`}
+>
+	<div class="hidden">
+		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
+	</div>
+
+	<section class="h-dvh grid justify-center content-center gap-10 px-4">
+		<section class="flex justify-center gap-2">
+			<CardIcon active={true}>
+				<ButtonModal PopoverTarget="modal-page-1">
+					<p>¡Feliz cumpleaños, {NAME}!</p>
+					<img class="kasane-teto-img" src="/imgs/kasane-teto-1.avif" alt="kasane teto">
+					<PlayTetoBirthday client:load />
+				</ButtonModal>
+			</CardIcon>
+		</section>
+
+		<CardMusic>
+			<article>
+				<h1 class="text-center text-[1.3rem] mb-3 text-blue-500 font-bold">Titulo</h1>
+				<p>Primer Parrafo</p>
+				<p>Segundo parrafo</p>
+			</article>
+		</CardMusic>
+
+		<AllButtonNav src1="/presentation" src2="/page-2" />
+	</section>
+</Layout>
+<style>
+	.kasane-teto-img {
+		height: auto;
+		mask-image: linear-gradient(
+			black 80%,
+			transparent
+		);
+		@media (width >= 900px) {width: 25vw};
+	}
+	article {
+		padding: 1rem 2rem;
+
+		& p {
+			margin-block: 1lh;
+		}
+	}
+</style>

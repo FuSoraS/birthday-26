@@ -1,0 +1,28 @@
+---
+import Layout from "@layouts/Layout.astro";
+import LetterCard from "@components/LetterCard.astro";
+import AllButtonNav from "@components/AllButtonNav.astro";
+import { ButtonWelcome } from "@components/ButtonWelcome.jsx";
+import CardIcon from "@components/IconCircle.astro";
+import Text from "@components/ClickableText.astro";
+---
+ 
+<Layout title="Presentación">
+  <div class="hidden">
+      <ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
+  </div>
+  <article class="h-dvh grid justify-center content-center gap-10">
+    <section class="flex justify-center gap-2">
+      <CardIcon active={true}>
+        <Text text="Text"/>
+      </CardIcon>
+    </section>
+    <LetterCard title="Hola">
+        Presentamos nuestra primera pagina
+        <ol class="list-decimal list-inside">
+          <li>Si ves círculos que parpadean, puedes hacer clic en ellos.</li>
+        </ol>
+    </LetterCard>
+    <AllButtonNav src1="/" src2="/page-1" />
+  </article>
+</Layout>

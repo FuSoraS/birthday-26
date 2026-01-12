@@ -1,0 +1,120 @@
+<ul class="wave-menu">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<style>
+    :root {
+        --wave-bar-color: #54cfe5;
+        --wave-container-width: 100px;
+        --wave-bar-width: 3px;
+        --wave-bar-height: 22px;
+    }
+    .wave-menu {
+        width: var(--wave-container-width);
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        transition: ease 0.2s;
+        position: relative;
+        background-color: rgb(7 28 85);
+        border-radius: 30px;
+    }
+
+    .wave-menu li {
+        list-style: none;
+        height: var(--wave-bar-height);
+        width: var(--wave-bar-width);
+        border-radius: 10px;
+        background: var(--wave-bar-color);
+        margin: 0 6px;
+        padding: 0;
+        animation-name: wave1;
+        animation-duration: 0.3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        transition: ease 0.2s;
+    }
+
+    .wave-menu li:nth-child(2) {
+        animation-name: wave2;
+        animation-delay: 0.2s;
+    }
+
+    .wave-menu li:nth-child(3) {
+        animation-name: wave3;
+        animation-delay: 0.23s;
+        animation-duration: 0.4s;
+    }
+
+    .wave-menu li:nth-child(4) {
+        animation-name: wave4;
+        animation-delay: 0.1s;
+        animation-duration: 0.3s;
+    }
+
+    .wave-menu li:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    .wave-menu li:nth-child(6) {
+        animation-name: wave2;
+        animation-duration: 0.5s;
+    }
+
+    .wave-menu li:nth-child(8) {
+        animation-name: wave4;
+        animation-delay: 0.4s;
+        animation-duration: 0.25s;
+    }
+
+    .wave-menu li:nth-child(9) {
+        animation-name: wave3;
+        animation-delay: 0.15s;
+    }
+
+    @keyframes wave1 {
+        from {
+            transform: scaleY(1);
+        }
+
+        to {
+            transform: scaleY(0.5);
+        }
+    }
+
+    @keyframes wave2 {
+        from {
+            transform: scaleY(0.3);
+        }
+
+        to {
+            transform: scaleY(0.6);
+        }
+    }
+
+    @keyframes wave3 {
+        from {
+            transform: scaleY(0.6);
+        }
+
+        to {
+            transform: scaleY(0.8);
+        }
+    }
+
+    @keyframes wave4 {
+        from {
+            transform: scaleY(0.2);
+        }
+
+        to {
+            transform: scaleY(0.5);
+        }
+    }
+</style>

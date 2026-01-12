@@ -1,0 +1,317 @@
+---
+import { NAME } from "@src/config";
+---
+<div transition:name="letter-card">
+
+    <div class="carta-container">
+        <!-- Solapa triangular -->
+        <div class="solapa">
+            <div class="detalle-solapa"></div>
+        </div>
+        <div class="sombra-solapa"></div>
+
+        <!-- Carta principal -->
+        <div class="carta">
+            <!-- Decoraciones de esquina -->
+            <div class="esquina-decorativa esquina-superior-izq"></div>
+            <div class="esquina-decorativa esquina-superior-der"></div>
+            <div class="esquina-decorativa esquina-inferior-izq"></div>
+            <div class="esquina-decorativa esquina-inferior-der"></div>
+
+            <!-- Elementos decorativos -->
+            <div class="flor-decorativa flor-1">✿</div>
+            <div class="flor-decorativa flor-2">✿</div>
+            <div class="pegatina-corazon"></div>
+            <div class="tachon tachon-1"></div>
+            <div class="tachon tachon-2"></div>
+
+            <!-- Contenido de la carta -->
+            <div class="carta-header">
+                <div class="carta-fecha">Un día soleado de primavera</div>
+                <div class="carta-destinatario">Mi querida amiga</div>
+            </div>
+
+            <div class="carta-saludo">Hola { NAME },</div>
+
+            <div class="carta-contenido">
+                <p>
+                    [contenido]
+                </p>
+            </div>
+
+            <div class="carta-despedida">Con todo mi cariño,</div>
+
+            <div class="carta-firma">Tu amigo para siempre</div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    .carta-container {
+        max-width: 600px;
+        width: 100%;
+        position: relative;
+        perspective: 1000px;
+    }
+
+    .carta {
+        background-color: #fffef7;
+        padding: 50px 35px 35px;
+        position: relative;
+        border-radius: 0 0 8px 8px;
+        box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.1),
+            0 0 30px rgba(255, 182, 193, 0.3) inset;
+        border: 1px solid #f8d7da;
+        transform: rotate(0.7deg);
+    }
+
+    /* Solapa triangular superior */
+    .solapa {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 40px solid #fff5f5;
+        z-index: 2;
+        filter: drop-shadow(0 -2px 3px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Efecto de doblez en la solapa */
+    .solapa::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -90px;
+        width: 180px;
+        height: 20px;
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 245, 245, 0.8),
+            rgba(255, 245, 245, 0.4)
+        );
+        clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    }
+
+    /* Detalle decorativo en la solapa */
+    .detalle-solapa {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 15px;
+        background: #ffb6c1;
+        border-radius: 50%;
+        opacity: 0.7;
+    }
+
+    /* Efecto de papel con textura */
+    .carta::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+                90deg,
+                transparent 98%,
+                rgba(0, 0, 0, 0.03) 98%
+            ),
+            linear-gradient(rgba(0, 0, 0, 0.03) 50%, transparent 50%);
+        background-size: 100% 2.4em;
+        pointer-events: none;
+        opacity: 0.6;
+        border-radius: 0 0 8px 8px;
+    }
+
+    /* Decoración de esquina */
+    .esquina-decorativa {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        opacity: 0.6;
+    }
+
+    .esquina-superior-izq {
+        top: 15px;
+        left: 15px;
+        border-top: 2px solid #ffb6c1;
+        border-left: 2px solid #ffb6c1;
+    }
+
+    .esquina-superior-der {
+        top: 15px;
+        right: 15px;
+        border-top: 2px solid #ffb6c1;
+        border-right: 2px solid #ffb6c1;
+    }
+
+    .esquina-inferior-izq {
+        bottom: 15px;
+        left: 15px;
+        border-bottom: 2px solid #ffb6c1;
+        border-left: 2px solid #ffb6c1;
+    }
+
+    .esquina-inferior-der {
+        bottom: 15px;
+        right: 15px;
+        border-bottom: 2px solid #ffb6c1;
+        border-right: 2px solid #ffb6c1;
+    }
+
+    .carta-header {
+        margin-bottom: 25px;
+        text-align: center;
+        position: relative;
+    }
+
+    .carta-fecha {
+        color: #d4a5a5;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .carta-destinatario {
+        font-family: "Dancing Script", cursive;
+        font-size: 2em;
+        color: #c97b7b;
+        margin-bottom: 5px;
+    }
+
+    .carta-saludo {
+        margin-bottom: 25px;
+        font-size: 1.3em;
+        color: #8b5a5a;
+    }
+
+    .carta-contenido {
+        line-height: 1.8;
+        margin-bottom: 25px;
+        font-size: 1.2em;
+        color: #5a4a4a;
+    }
+
+    .carta-contenido p {
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .carta-despedida {
+        margin-bottom: 20px;
+        font-size: 1.3em;
+        color: #8b5a5a;
+    }
+
+    .carta-firma {
+        margin-top: 40px;
+        text-align: right;
+        font-family: "Dancing Script", cursive;
+        font-size: 1.8em;
+        color: #c97b7b;
+    }
+
+    /* Elementos decorativos */
+    .flor-decorativa {
+        position: absolute;
+        opacity: 0.4;
+        font-size: 24px;
+        color: #ffb6c1;
+    }
+
+    .flor-1 {
+        top: 30px;
+        left: 45px;
+        transform: rotate(15deg);
+    }
+
+    .flor-2 {
+        bottom: 40px;
+        right: 50px;
+        transform: rotate(-10deg);
+    }
+
+    .pegatina-corazon {
+        position: absolute;
+        bottom: 30px;
+        left: 40px;
+        width: 30px;
+        height: 30px;
+        background: #ff6b8b;
+        clip-path: polygon(
+            50% 0%,
+            100% 35%,
+            82% 100%,
+            50% 75%,
+            18% 100%,
+            0% 35%
+        );
+        opacity: 0.7;
+        transform: rotate(15deg);
+    }
+
+    /* Tachones de pluma simulados */
+    .tachon {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: rgba(139, 90, 90, 0.2);
+        border-radius: 50%;
+    }
+
+    .tachon-1 {
+        top: 60px;
+        right: 50px;
+    }
+
+    .tachon-2 {
+        bottom: 80px;
+        left: 60px;
+    }
+
+    /* Sombra debajo de la solapa para efecto 3D */
+    .sombra-solapa {
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 180px;
+        height: 10px;
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+        .carta {
+            padding: 40px 25px 25px;
+        }
+
+        .solapa {
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-bottom: 35px solid #fff5f5;
+            top: -35px;
+        }
+
+        .solapa::before {
+            left: -70px;
+            width: 140px;
+        }
+
+        .carta-destinatario {
+            font-size: 1.7em;
+        }
+
+        .carta-contenido {
+            font-size: 1.1em;
+        }
+    }
+</style>

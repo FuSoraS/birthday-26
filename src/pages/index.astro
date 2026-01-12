@@ -1,0 +1,16 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { ButtonWelcome } from '@components/ButtonWelcome.jsx';
+import AnimationHome from "@components/AnimationHome.astro";
+import { NAME } from "@src/config";
+---
+
+<Layout
+	title={`Feliz cumpleaños, ${NAME}`}
+	description={`Un sitio web de deseos de cumpleaños hecho para ${NAME}.`}
+>
+<ButtonWelcome client:load src="/presentation" transition:name="media-player" transition:persist >
+	<AnimationHome />
+</ButtonWelcome>
+
+</Layout>

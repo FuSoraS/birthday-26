@@ -1,0 +1,34 @@
+---
+const { src, isInactive } = Astro.props;
+---
+
+<a
+    href={src}
+    class:list={[
+        "button",
+        {
+            "opacity-50 cursor-not-allowed pointer-events-none": isInactive,
+        },
+    ]}
+>
+    <slot />
+</a>
+
+<style>
+    .button {
+        font-size: 1.2rem;
+        color: #fafafa;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 2px solid #fafafa;
+        background: #252525;
+        box-shadow: 3px 3px #fafafa;
+        cursor: pointer;
+    }
+
+    .button:active {
+        box-shadow: none;
+        transform: translate(3px, 3px);
+    }
+</style>

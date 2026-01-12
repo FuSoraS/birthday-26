@@ -1,0 +1,28 @@
+<div class="w-lg">
+    <div class="flex flex-wrap items-center gap-5">
+        <div class="h-9-block w-7-block p-1 book bg-amber-50 rounded-3xl">
+            <slot />
+        </div>
+    </div>
+</div>
+<style>
+    :root {
+        --block-size: 48px;
+        --zoom: 1;
+    }
+
+    .book {
+        --zoom: 4;
+        --size: calc((var(--block-size) / var(--zoom) * 3));
+        border-width: var(--size);
+        border-style: solid;
+        border-left-width: calc(var(--size) / 1.5);
+        border-image: url("/imgs/ui/book.avif");
+        border-image-width: var(--size) var(--size) var(--size)
+            calc(var(--size) / 1.5);
+        border-image-slice: 8.5% 15% 12.75% 10% fill;
+        border-image-repeat: stretch;
+        color: #000;
+        text-shadow: none;
+    }
+</style>

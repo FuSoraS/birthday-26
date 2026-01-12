@@ -1,0 +1,55 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+const { title, description } = Astro.props;
+
+import { ClientRouter } from "astro:transitions";
+import "@styles/global.css";
+import "@fontsource/noto-serif-tc/600.css";
+import MaskAnimation from "@components/MaskAnimation.astro";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+		<ClientRouter />
+	</head>
+	<body>
+		<div class="h-dvh w-full bg-[#141414]">
+			<MaskAnimation>
+				<slot />
+			</MaskAnimation>
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--color-text: #c0c0c0;
+	}
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+
+		background-color: #262626;
+
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			sans-serif,
+			"Apple Color Emoji",
+			"Segoe UI Emoji",
+			Segoe UI Symbol,
+			"Noto Color Emoji";
+		color: var(--color-text);
+	}
+</style>
