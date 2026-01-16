@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import '@styles/button-welcome.css';
-import { NAME } from '@src/config';
+import { NAME } from 'astro:env/client';
 
 export function ButtonWelcome({ src = '', children = null}) {
     const [countclicks, setCountClicks] = useState(0);
