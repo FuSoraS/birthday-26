@@ -1,18 +1,14 @@
 ---
 import MineBook from "@components/MineBook.astro";
 import Layout from "@layouts/Layout.astro";
+
+import { PARAGRAPHMINE } from "astro:env/client";
 ---
 
 <Layout title="Page 3">
     <div class="grid justify-center h-dvh items-center">
         <MineBook>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-            asperiores, commodi explicabo aspernatur laboriosam dolorem corporis
-            doloremque numquam nesciunt cum aliquid ipsum maxime iste autem? Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-            asperiores, commodi explicabo aspernatur laboriosam dolorem corporis
-            doloremque numquam nesciunt cum aliquid ipsum maxime iste autem? Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit.
+            { PARAGRAPHMINE }
         </MineBook>
     </div>
 </Layout>
