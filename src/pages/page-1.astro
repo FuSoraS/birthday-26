@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { ButtonWelcome } from "@components/ButtonWelcome.jsx";
-import { PlayTetoBirthday } from "@components/PlayTetoBirthday.jsx";
+import ButtonWelcome from "@components/ButtonWelcome.svelte";
+import PlayTetoBirthday from "@components/PlayTetoBirthday.svelte";
 import AllButtonNav from "@components/AllButtonNav.astro";
 import CardIcon from "@components/IconCircle.astro";
 import { NAME } from "astro:env/client";
@@ -23,7 +23,7 @@ import CardMusic from "@components/CardMusic.astro";
 				<ButtonModal PopoverTarget="modal-page-1">
 					<p>¡Feliz cumpleaños, {NAME}!</p>
 					<!-- <img class="kasane-teto-media" src="/imgs/kasane-teto-1.avif" alt="kasane teto"> -->
-					<video src="kasane-teto-handbrake-without-audio-35.mp4" autoplay muted loop class="kasane-teto-media"></video>
+					<video src="/kasane-teto-handbrake-without-audio-35.mp4" autoplay muted loop class="kasane-teto-media"></video>
 					<PlayTetoBirthday client:load />
 				</ButtonModal>
 			</CardIcon>

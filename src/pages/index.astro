@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { ButtonWelcome } from '@components/ButtonWelcome.jsx';
+import ButtonWelcome from '@components/ButtonWelcome.svelte';
 import AnimationHome from "@components/AnimationHome.astro";
 import { NAME } from "astro:env/client";
 ---
@@ -10,7 +10,9 @@ import { NAME } from "astro:env/client";
 	description={`Un sitio web de deseos de cumpleaños hecho para ${NAME}.`}
 >
 <ButtonWelcome client:load src="/presentation" transition:name="media-player" transition:persist >
-	<AnimationHome />
+	<div>
+		<AnimationHome />
+	</div>
 </ButtonWelcome>
 
 </Layout>

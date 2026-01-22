@@ -1,0 +1,25 @@
+<script>
+    let countclicks = 0;
+    let audioRef;
+
+    const audioSrc = "/audios/kasane-teto-happy-birthday-1.ogg";
+    const audioVolume = 0.4;
+
+    $: if (audioRef) {
+        audioRef.src = audioSrc;
+        audioRef.volume = audioVolume;
+    }
+
+    function handleClick() {
+        countclicks += 1;
+        console.log(countclicks);
+        audioRef.play();
+    }
+</script>
+
+<div>
+    <button on:click={handleClick} class="bg-red-300 active:bg-red-400 text-white font-bold py-2 px-4 rounded-full mt-4">
+        Play audio
+    </button>
+    <audio bind:this={audioRef}></audio>
+</div>
