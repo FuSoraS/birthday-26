@@ -7,7 +7,7 @@ export function ButtonWelcome({ src = '', children = null}) {
 
     const audioRef = useRef();
 
-    const audioSrc = "/elf-off-vocal-short.ogg";
+    const audioSrc = "/audios/elf-off-vocal-short.ogg";
     const audioVolume = 0.3;
     
     useEffect(() => {

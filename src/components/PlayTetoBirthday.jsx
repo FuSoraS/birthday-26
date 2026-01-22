@@ -5,7 +5,7 @@ export function PlayTetoBirthday() {
 
     const audioRef = useRef();
 
-    const audioSrc = "/kasane-teto-happy-birthday-1.ogg";
+    const audioSrc = "/audios/kasane-teto-happy-birthday-1.ogg";
     const audioVolume = 0.4;
     
     useEffect(() => {
