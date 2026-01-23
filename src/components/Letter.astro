@@ -1,5 +1,5 @@
 ---
-import { NAME } from "astro:env/client";
+import { NAME, LETTER_HEADER_1, LETTER_HEADER_2 } from "astro:env/client";
 ---
 <div transition:name="letter-card">
 
@@ -27,8 +27,8 @@ import { NAME } from "astro:env/client";
 
             <!-- Contenido de la carta -->
             <div class="carta-header">
-                <div class="carta-fecha">Un día soleado de primavera</div>
-                <div class="carta-destinatario">Mi querida amiga</div>
+                <div class="carta-fecha">{LETTER_HEADER_1}</div>
+                <div class="carta-destinatario">{LETTER_HEADER_2}</div>
             </div>
 
             <div class="carta-saludo">Hola { NAME },</div>
