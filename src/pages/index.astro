@@ -6,7 +6,6 @@ import { NAME } from "astro:env/client";
 ---
 
 <Layout
-	title={`Feliz cumpleaños, ${NAME}`}
 	description={`Un sitio web de deseos de cumpleaños hecho para ${NAME}.`}
 >
 <ButtonWelcome client:load src="/presentation" transition:name="media-player" transition:persist >

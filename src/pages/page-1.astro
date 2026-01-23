@@ -9,10 +9,7 @@ import ButtonModal from "@src/components/ButtonModal.astro";
 import CardMusic from "@components/CardMusic.astro";
 ---
 
-<Layout
-	title={`Feliz cumpleaños, ${NAME}`}
-	description={`Un sitio web de deseos de cumpleaños hecho para ${NAME}.`}
->
+<Layout>
 	<div class="hidden">
 		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
 	</div>

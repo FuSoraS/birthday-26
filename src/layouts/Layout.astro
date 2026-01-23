@@ -1,23 +1,30 @@
 ---
+import "@styles/global.css"
+import { NAME } from "astro:env/client"
+import { ClientRouter } from "astro:transitions"
+import "@fontsource/noto-serif-tc/600.css"
+
+const defaultTitle = `Feliz cumpleaños, ${NAME}`
+const defaultDescription = `Un sitio web de deseos de cumpleaños hecho para ${NAME}.`
+
 interface Props {
-	title: string;
+	title?: string;
 	description?: string;
 }
-const { title, description } = Astro.props;
-
-import { ClientRouter } from "astro:transitions";
-import "@styles/global.css";
-import "@fontsource/noto-serif-tc/600.css";
+let { title, description } = Astro.props
+title ??= defaultTitle
+description ??= defaultDescription
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="description" content={description} />
 		<title>{title}</title>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<ClientRouter />
 	</head>
 	<body>
