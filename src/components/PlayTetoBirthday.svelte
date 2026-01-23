@@ -14,8 +14,8 @@
     }
 </script>
 
-<div>
-    <button on:click={handleClick} class="bg-red-300 active:bg-red-400 text-white font-bold py-2 px-4 rounded-full mt-4">
+<div class="z-2">
+    <button on:click={handleClick} class="bg-red-300 active:bg-red-400 text-white font-bold py-2 px-4 rounded-full">
         Play audio
     </button>
     <audio bind:this={audioRef}></audio>

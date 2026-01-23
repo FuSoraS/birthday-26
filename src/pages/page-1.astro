@@ -23,7 +23,9 @@ import CardMusic from "@components/CardMusic.astro";
 				<ButtonModal PopoverTarget="modal-page-1">
 					<p>¡Feliz cumpleaños, {NAME}!</p>
 					<!-- <img class="kasane-teto-media" src="/imgs/kasane-teto-1.avif" alt="kasane teto"> -->
-					<video src="/kasane-teto-handbrake-without-audio-35.mp4" autoplay muted loop class="kasane-teto-media"></video>
+					<div class="container-teto">
+						<video src="/kasane-teto-handbrake-without-audio-35.mp4" autoplay muted loop class="kasane-teto-media"></video>
+					</div>
 					<PlayTetoBirthday client:load />
 				</ButtonModal>
 			</CardIcon>
@@ -41,8 +43,15 @@ import CardMusic from "@components/CardMusic.astro";
 	</section>
 </Layout>
 <style>
+	.container-teto {
+		max-width: 400px;
+		width: 95vw;
+		height: auto;
+		max-height: 80dvh;
+	}
 	.kasane-teto-media {
-		height: min(90vh, 700px);
+		max-width: 100%;
+		height: auto;
 		mask-image: linear-gradient(
 			#000 80%,
 			transparent
