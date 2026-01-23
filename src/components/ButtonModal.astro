@@ -34,7 +34,7 @@ const PopoverTarget = Astro.props.PopoverTarget;
         justify-content: center;
         align-content: center;
         justify-items: center;
-        gap: 10px;
+        gap: clamp(4px, 2vh, 10px);
 
         position: fixed;
         top: 50%;
@@ -42,11 +42,11 @@ const PopoverTarget = Astro.props.PopoverTarget;
         transform: translate(-50%, -50%);
         padding: min(2rem, 5vw);
         border-radius: .7rem;
-        height: fit-content;
-        width: 100vw;
 
-        /* background-color: rgba(247, 247, 247, 0.8); */
+        height: 100dvh;
+
         background-color: #000;
+        color: #fff;
     }
     .close-button {
         font-size: 1.1rem;
@@ -57,5 +57,6 @@ const PopoverTarget = Astro.props.PopoverTarget;
         color: #fafafa;
         cursor: pointer;
         border-radius: 5px;
+        z-index: 2;
     }
 </style>
