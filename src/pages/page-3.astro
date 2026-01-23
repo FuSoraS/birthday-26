@@ -1,14 +1,18 @@
 ---
-import MineBook from "@components/MineBook.astro";
-import Layout from "@layouts/Layout.astro";
-
-import { PARAGRAPHMINE } from "astro:env/client";
+import Layout from "@layouts/Layout.astro"
+import Body from "@layouts/Body.astro"
+import Letter from "@components/Letter.astro"
+import ButtonWelcome from "@components/ButtonWelcome.svelte"
+import AllButtonNav from "@components/AllButtonNav.astro"
 ---
 
 <Layout>
-    <div class="grid justify-center h-dvh items-center">
-        <MineBook>
-            { PARAGRAPHMINE }
-        </MineBook>
-    </div>
+	<div class="hidden">
+		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
+	</div>
+	<Body>
+		<Letter />
+		
+		<AllButtonNav src1="/page-1" src2="" isInactive={true} />
+	</Body>
 </Layout>

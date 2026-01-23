@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Body from "@layouts/Body.astro";
 import ButtonWelcome from "@components/ButtonWelcome.svelte";
 import PlayTetoBirthday from "@components/PlayTetoBirthday.svelte";
 import AllButtonNav from "@components/AllButtonNav.astro";
@@ -14,7 +15,7 @@ import CardMusic from "@components/CardMusic.astro";
 		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
 	</div>
 
-	<section class="h-dvh grid justify-center content-center gap-10 px-4">
+	<Body>
 		<section class="flex justify-center gap-2">
 			<CardIcon active={true}>
 				<ButtonModal PopoverTarget="modal-page-1">
@@ -36,8 +37,8 @@ import CardMusic from "@components/CardMusic.astro";
 			</article>
 		</CardMusic>
 
-		<AllButtonNav src1="/presentation" src2="/page-2" />
-	</section>
+		<AllButtonNav src1="/presentation" src2="/page-minecraft" />
+	</Body>
 </Layout>
 <style>
 	.container-teto {

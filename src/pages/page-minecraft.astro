@@ -1,0 +1,28 @@
+---
+import Layout from "@layouts/Layout.astro"
+import Body from "@layouts/Body.astro"
+import MineBook from "@components/MineBook.astro"
+import AllButtonNav from "@components/AllButtonNav.astro"
+import CardIcon from "@components/IconCircle.astro"
+import Text from "@components/ClickableText.astro"
+import ButtonWelcome from "@components/ButtonWelcome.svelte"
+import { PARAGRAPHMINE } from "astro:env/client"
+---
+
+<Layout>
+    <div class="hidden">
+		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
+	</div>
+    <Body>
+        <section class="flex justify-center gap-2">
+            <CardIcon active={true}>
+                <Text text="Text"/>
+            </CardIcon>
+        </section>
+        <MineBook>
+            { PARAGRAPHMINE }
+        </MineBook>
+        
+        <AllButtonNav src1="/page-1" src2="/page-3" />
+    </Body>
+</Layout>

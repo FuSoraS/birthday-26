@@ -1,17 +1,18 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import LetterCard from "@components/LetterCard.astro";
-import AllButtonNav from "@components/AllButtonNav.astro";
-import ButtonWelcome from "@components/ButtonWelcome.svelte";
-import CardIcon from "@components/IconCircle.astro";
-import Text from "@components/ClickableText.astro";
+import Layout from "@layouts/Layout.astro"
+import Body from "@layouts/Body.astro";
+import LetterCard from "@components/LetterCard.astro"
+import AllButtonNav from "@components/AllButtonNav.astro"
+import ButtonWelcome from "@components/ButtonWelcome.svelte"
+import CardIcon from "@components/IconCircle.astro"
+import Text from "@components/ClickableText.astro"
 ---
  
 <Layout title="Presentación">
   <div class="hidden">
       <ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
   </div>
-  <article class="h-dvh grid justify-center content-center gap-10">
+  <Body>
     <section class="flex justify-center gap-2">
       <CardIcon active={true}>
         <Text text="Text"/>
@@ -24,5 +25,5 @@ import Text from "@components/ClickableText.astro";
         </ol>
     </LetterCard>
     <AllButtonNav src1="/" src2="/page-1" />
-  </article>
+  </Body>
 </Layout>
