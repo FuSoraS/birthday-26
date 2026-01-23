@@ -3,7 +3,7 @@ const { src1, src2, isInactive } = Astro.props;
 import ButtonMini from "@components/ButtonMini.astro";
 ---
 
-<div class="flex place-content-around gap-3 flex-wrap">
+<div class="flex place-content-center-safe gap-5 flex-wrap">
     <ButtonMini src={src1}>Atras</ButtonMini>
 
     <ButtonMini src={src2} isInactive={isInactive}>Continuar</ButtonMini>
