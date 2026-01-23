@@ -4,7 +4,7 @@
 
     export let src = '';
 
-    let countclicks = 0;
+    let audioPlayed = false;
     let audioRef;
 
     const audioSrc = "/audios/elf-off-vocal-short.ogg";
@@ -16,11 +16,9 @@
     }
 
     function handleClick() {
-        countclicks += 1;
-        console.log(countclicks);
-
-        if (countclicks === 1) {
+        if (!audioPlayed) {
             audioRef.play();
+            audioPlayed = true;
         }
     }
 </script>

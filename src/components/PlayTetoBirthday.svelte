@@ -1,5 +1,4 @@
 <script>
-    let countclicks = 0;
     let audioRef;
 
     const audioSrc = "/audios/kasane-teto-happy-birthday-1.ogg";
@@ -11,8 +10,6 @@
     }
 
     function handleClick() {
-        countclicks += 1;
-        console.log(countclicks);
         audioRef.play();
     }
 </script>
