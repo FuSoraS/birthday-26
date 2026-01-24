@@ -5,7 +5,6 @@ import ButtonWelcome from "@components/ButtonWelcome.svelte"
 import PlayTetoBirthday from "@components/PlayTetoBirthday.svelte"
 import AllButtonNav from "@components/AllButtonNav.astro"
 import CardIcon from "@components/IconCircle.astro"
-import { NAME } from "astro:env/client";
 import ButtonModal from "@src/components/ButtonModal.astro"
 import CardMusic from "@components/CardMusic.astro"
 ---
@@ -19,12 +18,10 @@ import CardMusic from "@components/CardMusic.astro"
 		<section class="flex justify-center gap-2">
 			<CardIcon active={true}>
 				<ButtonModal PopoverTarget="modal-page-1">
-					<p>¡Feliz cumpleaños, {NAME}!</p>
-					<!-- <img class="kasane-teto-media" src="/imgs/kasane-teto-1.avif" alt="kasane teto"> -->
-					<div class="container-teto">
-						<video src="/kasane-teto-handbrake-without-audio-35.mp4" autoplay muted loop class="kasane-teto-media"></video>
-					</div>
-					<PlayTetoBirthday client:load />
+						<div class="container-teto">
+							<video id="teto-video" src="/kasane-teto-handbrake-without-audio-35.mp4" muted class="kasane-teto-media"></video>
+						</div>
+					<PlayTetoBirthday client:load targetSelector="#teto-video" />
 				</ButtonModal>
 			</CardIcon>
 		</section>

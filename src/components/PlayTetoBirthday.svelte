@@ -1,5 +1,10 @@
 <script>
+    import { onMount } from "svelte";
+
+    export let targetSelector = ".kasane-teto-media";
+
     let audioRef;
+    let mediaEl;
 
     const audioSrc = "/audios/kasane-teto-happy-birthday-1.ogg";
     const audioVolume = 0.5;
@@ -9,8 +14,13 @@
         audioRef.volume = audioVolume;
     }
 
+    onMount(() => {
+        mediaEl = document.querySelector(targetSelector);
+    });
+
     function handleClick() {
-        audioRef.play();
+        audioRef?.play();
+        mediaEl?.play();
     }
 </script>
 
