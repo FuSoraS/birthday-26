@@ -2,7 +2,7 @@
     let audioRef;
 
     const audioSrc = "/audios/kasane-teto-happy-birthday-1.ogg";
-    const audioVolume = 0.4;
+    const audioVolume = 0.5;
 
     $: if (audioRef) {
         audioRef.src = audioSrc;
