@@ -1,4 +1,5 @@
 ---
+const backgroundColor = Astro.props.backgroundColor || "#000";
 const PopoverTarget = Astro.props.PopoverTarget;
 ---
 <button class="button p-2" popovertarget={PopoverTarget}>
@@ -8,7 +9,7 @@ const PopoverTarget = Astro.props.PopoverTarget;
     <slot />
 	<button class="close-button" popovertarget={PopoverTarget} popovertargetaction="hide">Cerrar</button>
 </section>
-<style>
+<style define:vars={{ backgroundColor }}>
     .button {
         color: #fafafa;
         text-transform: uppercase;
@@ -43,9 +44,9 @@ const PopoverTarget = Astro.props.PopoverTarget;
         padding: min(2rem, 5vw);
         border-radius: .7rem;
 
-        height: 100dvh;
+        height: min(100dvh, fit-content);
 
-        background-color: #000;
+        background-color: var(--backgroundColor);
         color: #fff;
     }
     .close-button {

@@ -4,6 +4,10 @@ import Body from "@layouts/Body.astro"
 import Letter from "@components/Letter.astro"
 import ButtonWelcome from "@components/ButtonWelcome.svelte"
 import AllButtonNav from "@components/AllButtonNav.astro"
+import CardIcon from "@components/IconCircle.astro"
+import ButtonModal from "@src/components/ButtonModal.astro"
+import IconCapybara from "@src/components/icons/IconCapybara.astro"
+import IconHeartAnima from "@src/components/icons/IconHeartAnima.astro"
 ---
 
 <Layout>
@@ -11,6 +15,17 @@ import AllButtonNav from "@components/AllButtonNav.astro"
 		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
 	</div>
 	<Body>
+		<section class="flex justify-center gap-5 mb-3">
+			<ButtonModal PopoverTarget="modal-page-1" backgroundColor="rgb(0, 0, 0, 0.6)">
+				<IconCapybara />
+			</ButtonModal>
+			<ButtonModal PopoverTarget="modal-page-2" backgroundColor="rgb(0, 0, 0, 0.6)">
+				<CardIcon>
+					<IconHeartAnima />
+				</CardIcon>
+			</ButtonModal>
+		</section>
+
 		<Letter />
 		
 		<AllButtonNav src1="/pag-craft" src2="" isInactive={true} />
