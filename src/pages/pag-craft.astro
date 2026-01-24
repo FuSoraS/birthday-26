@@ -4,7 +4,7 @@ import Body from "@layouts/Body.astro"
 import MineBook from "@components/MineBook.astro"
 import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonWelcome from "@components/ButtonWelcome.svelte"
-import { PARAGRAPHMINE } from "astro:env/client"
+import { MINE_P_1 } from "astro:env/client"
 ---
 
 <Layout>
@@ -13,7 +13,7 @@ import { PARAGRAPHMINE } from "astro:env/client"
 	</div>
     <Body>
         <MineBook>
-            { PARAGRAPHMINE }
+            { MINE_P_1 }
         </MineBook>
         
         <AllButtonNav src1="/pag-music" src2="/pag-letter" />

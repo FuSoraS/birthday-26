@@ -7,6 +7,7 @@ import AllButtonNav from "@components/AllButtonNav.astro"
 import CardIcon from "@components/IconCircle.astro"
 import ButtonModal from "@src/components/ButtonModal.astro"
 import CardMusic from "@components/CardMusic.astro"
+import { MUSIC_TITLE, MUSIC_P_1 } from "astro:env/client"
 ---
 
 <Layout>
@@ -28,8 +29,8 @@ import CardMusic from "@components/CardMusic.astro"
 
 		<CardMusic>
 			<article>
-				<h1 class="text-center text-[1.3rem] mb-3 text-blue-500 font-bold">Titulo</h1>
-				<p>Primer Parrafo</p>
+				<h1 class="text-center text-[1.3rem] mb-3 text-blue-500 font-bold"> { MUSIC_TITLE } </h1>
+				<p>{ MUSIC_P_1 }</p>
 				<p>Segundo parrafo</p>
 			</article>
 		</CardMusic>

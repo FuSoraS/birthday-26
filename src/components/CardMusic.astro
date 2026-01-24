@@ -5,7 +5,7 @@ import IconHeartStatic from "./icons/IconHeartStatic.astro";
 ---
 
 <section class="music-card">
-    <div class="absolute -top-5 z-1 left-58">
+    <div class="music-loader-wrapper">
         <MusicLoader />
     </div>
     <slot />
@@ -29,6 +29,7 @@ import IconHeartStatic from "./icons/IconHeartStatic.astro";
         border: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
         max-width: 600px;
+        position: relative;
     }
     .wave-container {
         border-top: #ffffffa2 1px solid;
@@ -45,5 +46,18 @@ import IconHeartStatic from "./icons/IconHeartStatic.astro";
         display: flex;
         justify-content: flex-start;
         align-items: center;
+    }
+    .music-loader-wrapper {
+        position: absolute;
+        top: -1.25rem;
+        z-index: 1;
+        left: 35rem;
+    }
+    @media (max-width: 640px) {
+        .music-loader-wrapper {
+            top: -1rem;
+            left: 95%;
+            transform: translateX(-50%) scale(0.9);
+        }
     }
 </style>
