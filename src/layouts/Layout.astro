@@ -85,23 +85,22 @@ description ??= defaultDescription
 		}
 	}
 
-  #mask {
-    mask-image: url('/balloon.svg');
-    mask-position: center center;
-    mask-repeat: no-repeat;
-    mask-size: 50px;
-    overflow-y: scroll;
-    position: fixed;
-    inset: 0;
+	#mask {
+		mask-image: url('/balloon.svg');
+		mask-position: center center;
+		mask-repeat: no-repeat;
+		mask-size: 50px;
+		position: fixed;
+		inset: 0;
 
-    &.animated {
-      animation: lock-reveal 3s forwards ease-in-out;
-    }
-    &.unlocked {
-      position: relative;
-      mask-size: 2000vh;
-    }
-  }
+		&.animated {
+		animation: lock-reveal 3s forwards ease-in-out;
+		}
+		&.unlocked {
+		position: relative;
+		mask-size: 2000vh;
+		}
+	}
 </style>
 
 <script>
