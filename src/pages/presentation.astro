@@ -6,6 +6,7 @@ import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonWelcome from "@components/ButtonWelcome.svelte"
 import CardIcon from "@components/IconCircle.astro"
 import Text from "@components/ClickableText.astro"
+import { NAME } from "astro:env/client";
 ---
  
 <Layout title="Presentación">
@@ -15,7 +16,7 @@ import Text from "@components/ClickableText.astro"
   <Body>
     <section class="flex justify-center gap-2">
       <CardIcon active={true}>
-        <Text text="Text"/>
+        <Text text={NAME} />
       </CardIcon>
     </section>
     <LetterCard title="Hola">
@@ -24,6 +25,6 @@ import Text from "@components/ClickableText.astro"
           <li>Si ves círculos que parpadean, puedes hacer clic en ellos.</li>
         </ol>
     </LetterCard>
-    <AllButtonNav src1="/" src2="/page-1" />
+    <AllButtonNav src1="/" src2="/pag-music" />
   </Body>
 </Layout>
