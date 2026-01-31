@@ -1,6 +1,8 @@
 <div class="max-w-lg p-3 font-[Minecraft]">
     <div class="flex flex-wrap items-center gap-5">
         <div class="h-9-block w-7-block p-1 book bg-amber-50 rounded-3xl">
+            <div class="page-top">Página 4 de 5</div>
+
             <slot />
         </div>
     </div>
@@ -24,5 +26,9 @@
         border-image-repeat: stretch;
         color: #000;
         text-shadow: none;
+    }
+    .page-top {
+       text-align: end;
+       margin-bottom: 4px;
     }
 </style>
