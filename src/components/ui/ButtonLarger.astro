@@ -1,0 +1,27 @@
+<div class="button py-2 px-4 text-lg whitespace-nowrap">
+    <slot />
+</div>
+<style>
+  .button {
+    image-rendering: pixelated;
+    background-size: cover;
+    background-image: url('/imgs/ui/button-inside.png');
+    border-width: calc(var(--block-size) / 10);
+    border-image: url('/imgs/ui/button-border.png') 10% 3% stretch;
+    color: #d1d5db;
+    transition: all 150ms ease-in-out;
+  }
+
+  .button:hover {
+    background-image: url('/imgs/ui/button-inside-hover.png');
+    border-image-source: url('/imgs/ui/button-border-hover.png');
+    color: #fef08a;
+  }
+
+  .button:active {
+    background-image: url('/imgs/ui/button-inside-active.png');
+    border-image-source: url('/imgs/ui/button-border-active.png');
+    color: #a8a29e;
+  }
+
+</style>
