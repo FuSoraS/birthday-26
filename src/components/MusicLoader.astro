@@ -21,17 +21,19 @@
   --color-dark: #675d50;
   --color-light: #f3deba;
   /* Size */
-  --size-container: 50px;
-  --size-plate: 45px;
-  --size-plate-border: 34px;
-  --size-plate-white: 23px;
+  --music-loader-scale: 1;
 
-  --size-circ: 10px;
-  --width-rect: 3px;
-  --height-rect: 16px;
+  --size-container: calc(50px * var(--music-loader-scale));
+  --size-plate: calc(45px * var(--music-loader-scale));
+  --size-plate-border: calc(34px * var(--music-loader-scale));
+  --size-plate-white: calc(23px * var(--music-loader-scale));
 
-  --size-circle-center: 10px;
-  --size-box-shadow: 3px;
+  --size-circ: calc(10px * var(--music-loader-scale));
+  --width-rect: calc(3px * var(--music-loader-scale));
+  --height-rect: calc(16px * var(--music-loader-scale));
+
+  --size-circle-center: calc(10px * var(--music-loader-scale));
+  --size-box-shadow: calc(3px * var(--music-loader-scale));
 }
   .container {
     width: var(--size-container);
