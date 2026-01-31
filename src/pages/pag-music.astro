@@ -54,10 +54,12 @@ import { MUSIC_TITLE, MUSIC_P_1 } from "astro:env/client"
 		);
 	}
 	article {
-		padding: 1rem 2rem;
 
 		& p {
 			margin-block: 1lh;
+		}
+		& p:last-child {
+			margin-block: 0;
 		}
 	}
 </style>

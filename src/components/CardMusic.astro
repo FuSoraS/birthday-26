@@ -8,16 +8,17 @@ import IconHeartStatic from "@icons/IconHeartStatic.astro";
     <div class="music-loader-wrapper">
         <MusicLoader />
     </div>
-    <slot />
-        <div class="wave-container justify-end">
-            <div class="music-stats">
-                <i class="text-[#ff416c] mr-[5px]">
-                    <IconHeartStatic />
-                </i>
-                <span class="text-[#a0a0ff] text-[0.9rem]">Inspiración</span>
-            </div>
-            <Wave />
+        <slot />
+    <div class="line"></div>
+    <div class="wave-container justify-end">
+        <div class="music-stats">
+            <i class="text-[#ff416c] mr-[5px]">
+                <IconHeartStatic />
+            </i>
+            <span class="text-[#a0a0ff] text-[0.9rem]">Inspiración</span>
         </div>
+        <Wave />
+    </div>
 </section>
 <style>
     .music-card {
@@ -30,11 +31,15 @@ import IconHeartStatic from "@icons/IconHeartStatic.astro";
         width: 100%;
         max-width: 600px;
         position: relative;
+        padding: 1rem 2rem;
+    }
+    .line {
+        height: 2px;
+        background: #1d285ba2;
+        margin: 1rem 0;
+        border-radius: 12px;
     }
     .wave-container {
-        border-top: #ffffffa2 1px solid;
-        margin-top: 15px;
-        padding: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
