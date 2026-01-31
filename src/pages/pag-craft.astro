@@ -1,21 +1,32 @@
 ---
 import Layout from "@layouts/Layout.astro"
 import Body from "@layouts/Body.astro"
-import MineBook from "@components/MineBook.astro"
+import MineBook from "@components/ui/Book.astro"
 import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonWelcome from "@components/ButtonWelcome.svelte"
 import { MINE_P_1 } from "astro:env/client"
+import ButtonModal from "@src/components/ButtonModal.astro"
+import ButtonLarger from "@components/ui/ButtonLarger.astro"
 ---
 
 <Layout>
     <div class="hidden">
 		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
 	</div>
-    <Body>
+    <Body gap="gap-8">
+        <section class="flex justify-center gap-2">
+            <ButtonModal PopoverTarget="modal-page-1">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio non tempore laudantium nihil eaque asperiores qui corporis ducimus quae earum doloribus atque soluta, quod culpa maxime illum repudiandae dolores excepturi?
+                <button slot="close" popovertarget="modal-page-1" popovertargetaction="hide">
+                   <ButtonLarger>
+                        Cerrar
+                   </ButtonLarger>
+                </button>
+            </ButtonModal>
+        </section>
         <MineBook>
             { MINE_P_1 }
         </MineBook>
-        
         <AllButtonNav src1="/pag-music" src2="/pag-letter" />
     </Body>
 </Layout>

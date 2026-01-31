@@ -7,7 +7,9 @@ const PopoverTarget = Astro.props.PopoverTarget;
 </button>
 <section id={PopoverTarget} popover>
     <slot />
-	<button class="close-button" popovertarget={PopoverTarget} popovertargetaction="hide">Cerrar</button>
+	<slot name="close">
+        <button class="close-button" popovertarget={PopoverTarget} popovertargetaction="hide">Cerrar</button>
+    </slot>
 </section>
 <style define:vars={{ backgroundColor }}>
     .button {

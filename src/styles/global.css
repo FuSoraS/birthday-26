@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 @theme {
+  --spacing-2-block: calc(var(--block-size) * 2);
+  --spacing-3-block: calc(var(--block-size) * 3);
+  --spacing-4-block: calc(var(--block-size) * 4);
+  --spacing-6-block: calc(var(--block-size) * 6);
+  --spacing-7-block: calc(var(--block-size) * 7);
+  --spacing-9-block: calc(var(--block-size) * 9);
+
   --animate-flicker: flicker 1s cubic-bezier(.4, 0, .6, 1) infinite;
   @keyframes flicker {
     0%, 100%{

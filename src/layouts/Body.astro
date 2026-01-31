@@ -1,3 +1,11 @@
-<section class="h-dvh grid justify-center content-center gap-10 px-4">
+---
+interface Props {
+  gap?: string;
+}
+
+const { gap = "gap-10" } = Astro.props;
+---
+
+<section class={`h-dvh grid justify-center content-center ${gap} px-4`}>
     <slot />
 </section>
