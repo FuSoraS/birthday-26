@@ -10,6 +10,13 @@ import ButtonLarger from "@components/ui/ButtonLarger.astro"
 ---
 
 <Layout>
+    <link rel="preload" href="/imgs/ui/button-inside.png" as="image" type="image/png" slot="head" />
+    <link rel="preload" href="/imgs/ui/button-border.png" as="image" type="image/png" slot="head" />
+    <link rel="preload" href="/imgs/ui/button-inside-hover.png" as="image" type="image/png" slot="head" />
+    <link rel="preload" href="/imgs/ui/button-border-hover.png" as="image" type="image/png" slot="head" />
+    <link rel="preload" href="/imgs/ui/button-inside-active.png" as="image" type="image/png" slot="head" />
+    <link rel="preload" href="/imgs/ui/button-border-active.png" as="image" type="image/png" slot="head" />
+    
     <div class="hidden">
 		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
 	</div>
