@@ -1,12 +1,11 @@
 ---
 import "@styles/global.css"
-import { NAME } from "astro:env/client"
+import { NAME, URL } from "astro:env/client"
 import { ClientRouter } from "astro:transitions"
 import "@fontsource/noto-serif-tc/600.css"
 
 const defaultTitle = `Feliz cumpleaños, ${NAME}`
 const defaultDescription = `Un sitio web de deseos de cumpleaños hecho para ${NAME}.`
-
 interface Props {
 	title?: string;
 	description?: string;
@@ -37,9 +36,26 @@ description ??= defaultDescription
 		/>
 		
 		<meta name="viewport" content="width=device-width" />
+
+		<meta name="title" content={title} />
 		<meta name="description" content={description} />
 
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={URL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<!-- <meta property="og:image" content={ URL + "img.png" } /> -->
+
+		<!-- X (Twitter) -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={URL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<!-- <meta property="twitter:image" content={ URL + "img.png" } /> -->
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.png" type="image/png" />
 		<ClientRouter />
 	</head>
 	<body>
