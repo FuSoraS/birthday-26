@@ -1,6 +1,9 @@
 ---
 const backgroundColor = Astro.props.backgroundColor || "#000";
 const PopoverTarget = Astro.props.PopoverTarget;
+const gradient1 = Astro.props.gradient1 || "#fff";
+const gradient2 = Astro.props.gradient2 || "#fff";
+const gradient3 = Astro.props.gradient3 || "#fff";
 ---
 <button class="button p-2" popovertarget={PopoverTarget}>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-gift"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 9a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1l0 -2" /><path d="M12 8l0 13" /><path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" /></svg>
@@ -11,13 +14,15 @@ const PopoverTarget = Astro.props.PopoverTarget;
         <button class="close-button" popovertarget={PopoverTarget} popovertargetaction="hide">Cerrar</button>
     </slot>
 </section>
-<style define:vars={{ backgroundColor }}>
+<style define:vars={{ backgroundColor, gradient1, gradient2, gradient3 }}>
     .button {
+        --border-color: #fafafa;
+
         color: #fafafa;
         text-transform: uppercase;
-        border: 2px solid #fafafa;
+        border: 2px solid var(--border-color);
         background: #252525;
-        box-shadow: 3px 3px #fafafa;
+        box-shadow: 3px 3px var(--border-color);
         cursor: pointer;
         border-radius: 100%;
     }
@@ -28,7 +33,13 @@ const PopoverTarget = Astro.props.PopoverTarget;
     }
     .button svg {
         width: 90px;
+
+        background: linear-gradient(150deg, var(--gradient1), var(--gradient2), var(--gradient3));
+        mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 9a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1l0 -2' /><path d='M12 8l0 13' /><path d='M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7' /><path d='M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5' /></svg>") no-repeat center / contain;
+        color: transparent;
+        stroke: transparent;
     }
+
     section::backdrop {
         background: rgba(0, 0, 0, 0.5);
     }
@@ -55,7 +66,7 @@ const PopoverTarget = Astro.props.PopoverTarget;
         transition: .3s;
 
         @starting-style {
-            scale: 0.7;
+            scale: 0.8;
         }
     }
     .close-button {
