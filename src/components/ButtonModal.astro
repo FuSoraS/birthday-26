@@ -49,7 +49,14 @@ const PopoverTarget = Astro.props.PopoverTarget;
         height: min(100dvh, fit-content);
 
         background-color: var(--backgroundColor);
-        color: #fff;
+        color: #fafafa;
+
+        scale: 1;
+        transition: .3s;
+
+        @starting-style {
+            scale: 0.7;
+        }
     }
     .close-button {
         font-size: 1.1rem;
