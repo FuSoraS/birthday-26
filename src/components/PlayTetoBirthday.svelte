@@ -6,7 +6,7 @@
     let audioRef;
     let mediaEl;
 
-    const audioSrc = "/audios/kasane-teto-happy-birthday-1.ogg";
+    const audioSrc = "/audios/happy-birthday-teto.opus";
     const audioVolume = 0.5;
 
     $: if (audioRef) {

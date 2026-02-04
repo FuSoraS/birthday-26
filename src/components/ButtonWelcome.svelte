@@ -7,7 +7,7 @@
     let audioPlayed = false;
     let audioRef;
 
-    const audioSrc = "/audios/elf-off-vocal-short.ogg";
+    const audioSrc = "/audios/ado-elf-off-vocal.opus";
     const audioVolume = 0.3;
 
     $: if (audioRef) {
