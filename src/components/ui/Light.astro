@@ -1,4 +1,6 @@
-<!-- From Uiverse.io by kelvyn_8843 --> 
+---
+const scale = Astro.props.scale || 1;
+---
 <label class="container">
   <input checked="checked" type="checkbox" />
   <div class="checkmark"></div>
@@ -63,7 +65,7 @@
     </div>
   </div>
 </label>
-<style>
+<style define:vars={{ scale }}>
 .container input {
   position: absolute;
   opacity: 0;
@@ -85,6 +87,7 @@
   display: flex;
   justify-content: center;
   height: 150px;
+  scale: var(--scale);
 }
 
 .head,
