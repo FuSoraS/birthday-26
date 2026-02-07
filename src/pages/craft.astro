@@ -6,9 +6,9 @@ import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonWelcome from "@components/ButtonWelcome.svelte"
 import { MINE_P_1 } from "astro:env/client"
 import ButtonModal from "@src/components/ButtonModal.astro"
-import ButtonLarger from "@components/ui/ButtonLarger.astro"
 import { ROUTES } from "@src/config.ts"
 import Light from "@src/components/ui/Light.astro"
+import ButtonCraft from "@src/components/ui/ButtonCraft.astro"
 ---
 
 <Layout>
@@ -28,9 +28,9 @@ import Light from "@src/components/ui/Light.astro"
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio non tempore laudantium nihil eaque asperiores qui corporis ducimus quae earum doloribus atque soluta, quod culpa maxime illum repudiandae dolores excepturi?
                 <Light scale="0.8"/>
                 <button slot="close" popovertarget="modal-page-1" popovertargetaction="hide">
-                   <ButtonLarger>
+                   <ButtonCraft>
                         Cerrar
-                   </ButtonLarger>
+                   </ButtonCraft>
                 </button>
             </ButtonModal>
         </section>
