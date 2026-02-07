@@ -2,10 +2,11 @@
 import Layout from "@layouts/Layout.astro";
 import ButtonWelcome from '@components/ButtonWelcome.svelte';
 import AnimationHome from "@components/AnimationHome.astro";
+import { ROUTES } from "@src/config.ts";
 ---
 
 <Layout title="Inicio" description="Sorpresa">
-<ButtonWelcome client:load src="/presentation" transition:name="media-player" transition:persist >
+<ButtonWelcome client:load src={ROUTES.PRESENTATION} transition:name="media-player" transition:persist >
 	<div>
 		<AnimationHome />
 	</div>
