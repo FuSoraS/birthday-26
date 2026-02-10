@@ -4,3 +4,5 @@ export const ROUTES = {
   CRAFT: "/craft",
   PRESENTATION: "/presentation",
 } as const;
+
+export type ColorHex = `#${string}`;
