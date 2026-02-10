@@ -1,5 +1,10 @@
 minimumReleaseAge: 4320
+
 minimumReleaseAgeExclude:
-- react
-- react-dom
-- svelte
+  - react
+  - react-dom
+  - svelte
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
