@@ -7,7 +7,7 @@ import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonModal from "@src/components/ButtonModal.astro"
 import CardMusic from "@components/CardMusic.astro"
 import { MUSIC_TITLE, MUSIC_P_1 } from "astro:env/client"
-import { ROUTES } from "@src/config.ts"
+import { ROUTES, BASE_URL } from "@src/config.ts"
 ---
 
 <Layout>
@@ -21,8 +21,8 @@ import { ROUTES } from "@src/config.ts"
 					<div class="container-teto">
 					<video 
 						id="teto-video" 
-						src="/videos/kasane-teto.mp4" 
-						poster="/imgs/kasane-teto.avif"
+						src={`${BASE_URL}/videos/kasane-teto.mp4`} 
+						poster={`${BASE_URL}/imgs/kasane-teto.avif`}
 						muted 
 						class="kasane-teto-media"
 					></video>

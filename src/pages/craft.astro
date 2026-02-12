@@ -6,18 +6,18 @@ import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonWelcome from "@components/ButtonWelcome.svelte"
 import { MINE_P_1 } from "astro:env/client"
 import ButtonModal from "@src/components/ButtonModal.astro"
-import { ROUTES } from "@src/config.ts"
+import { ROUTES, BASE_URL } from "@src/config.ts"
 import Light from "@src/components/ui/Light.astro"
 import ButtonCraft from "@src/components/ui/ButtonCraft.astro"
 ---
 
 <Layout>
-    <link rel="preload" href="/imgs/ui/button-inside.avif" as="image" type="image/avif" slot="head" />
-    <link rel="preload" href="/imgs/ui/button-border.png" as="image" type="image/png" slot="head" />
-    <link rel="preload" href="/imgs/ui/button-inside-hover.avif" as="image" type="image/avif" slot="head" />
-    <link rel="preload" href="/imgs/ui/button-border-hover.png" as="image" type="image/png" slot="head" />
-    <link rel="preload" href="/imgs/ui/button-inside-active.avif" as="image" type="image/avif" slot="head" />
-    <link rel="preload" href="/imgs/ui/button-border-active.png" as="image" type="image/png" slot="head" />
+    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-inside.avif`} as="image" type="image/avif" slot="head" />
+    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-border.png`} as="image" type="image/png" slot="head" />
+    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-inside-hover.avif`} as="image" type="image/avif" slot="head" />
+    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-border-hover.png`} as="image" type="image/png" slot="head" />
+    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-inside-active.avif`} as="image" type="image/avif" slot="head" />
+    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-border-active.png`} as="image" type="image/png" slot="head" />
     
     <div class="hidden">
 		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
