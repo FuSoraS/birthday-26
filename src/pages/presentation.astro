@@ -7,7 +7,7 @@ import ButtonWelcome from "@components/ButtonWelcome.svelte"
 import CardIcon from "@components/IconCircle.astro"
 import Text from "@components/ClickableText.astro"
 import { NAME } from "astro:env/client";
-import { ROUTES } from "@src/config.ts"
+import { ROUTES, BASE_URL } from "@src/config.ts"
 ---
  
 <Layout title="Presentación">
@@ -26,6 +26,6 @@ import { ROUTES } from "@src/config.ts"
           <li>Si ves círculos que parpadean, puedes hacer clic en ellos.</li>
         </ol>
     </LetterCard>
-    <AllButtonNav src1="/birthday-26" src2={ROUTES.MUSIC} />
+    <AllButtonNav src1={BASE_URL} src2={ROUTES.MUSIC} />
   </Body>
 </Layout>
