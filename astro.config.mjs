@@ -17,7 +17,7 @@ export default defineConfig({
 
   env: {
     schema: {
-        NAME: envField.string({ context: 'client', access: 'public', default: 'Nombre' }),
+        NAME: envField.string({ context: 'client', access: 'public', default: 'Name' }),
         URL: envField.string({ context: 'client', access: 'public', default: '' }),
         MINE_P_1: envField.string({ context: 'client', access: 'public', default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis asperiores, commodi explicabo aspernatur laboriosam dolorem corporis doloremque numquam nesciunt cum aliquid ipsum maxime iste autem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis asperiores, commodi explicabo aspernatur laboriosam dolorem corporis doloremque numquam nesciunt cum aliquid ipsum maxime iste autem? Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}),
         LETTER_HEADER_1: envField.string({ context: 'client', access: 'public', default: 'Un día soleado de primavera' }),
