@@ -6,7 +6,7 @@ import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonWelcome from "@components/ButtonWelcome.svelte"
 import CardIcon from "@components/IconCircle.astro"
 import Text from "@components/ClickableText.astro"
-import { NAME } from "astro:env/client";
+import { NAME, PRESENTATION_P_1, PRESENTATION_P_2 } from "astro:env/client";
 import { ROUTES } from "@src/config.ts"
 ---
  
@@ -21,11 +21,17 @@ import { ROUTES } from "@src/config.ts"
       </CardIcon>
     </section>
     <LetterCard title="Hola">
-        Presentamos nuestra primera pagina
-        <ol class="list-decimal list-inside">
+        <p>{PRESENTATION_P_1}</p>
+        <p>{PRESENTATION_P_2}</p>
+        <!-- <ol class="list-decimal list-inside">
           <li>Si ves círculos que parpadean, puedes hacer clic en ellos.</li>
-        </ol>
+        </ol> -->
     </LetterCard>
     <AllButtonNav src1="/" src2={ROUTES.MUSIC} />
   </Body>
 </Layout>
+<style>
+  p {
+    margin-block: 1lh;
+  }
+</style>
