@@ -1,7 +1,7 @@
-<div class="max-w-lg p-3 font-[Minecraft]">
+<div class="max-w-lg min-w-5 p-3 font-[Minecraft] text-black">
     <div class="flex flex-wrap items-center gap-5">
         <div class="w-7-block p-1 book bg-amber-50 rounded-3xl">
-            <div class="page-top">Página 4 de 5</div>
+            <div class="text-end mb-1">Página 4 de 5</div>
 
             <slot />
         </div>
@@ -24,11 +24,5 @@
             calc(var(--size) / 1.5);
         border-image-slice: 8.5% 15% 12.75% 10% fill;
         border-image-repeat: stretch;
-        color: #000;
-        text-shadow: none;
-    }
-    .page-top {
-       text-align: end;
-       margin-bottom: 4px;
     }
 </style>
