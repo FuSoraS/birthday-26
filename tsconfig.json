@@ -13,9 +13,6 @@
       "@/*": [
         "src/*"
       ],
-      "@icons/*": [
-        "src/components/icons/*"
-      ]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

@@ -1,8 +1,8 @@
 ---
-import Flower from "@icons/IconFlower.astro";
+import Flower from "@/components/icons/IconFlower.astro";
+
 const { text } = Astro.props;
 ---
-
 <div class="container">
     <input type="checkbox" class="checkbox" />
 
@@ -10,7 +10,6 @@ const { text } = Astro.props;
         <Flower class="text-pink-700 flower" />{text}
     </div>
 </div>
-
 <style>
     :root {
         --font-text: "Noto Serif TC", serif;
