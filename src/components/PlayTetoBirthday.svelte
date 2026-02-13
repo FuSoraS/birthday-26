@@ -1,13 +1,13 @@
 <script>
     import { onMount } from "svelte";
-    import { BASE_URL } from "@src/config.ts";
+    import { ROUTES } from "@/config.ts";
 
     export let targetSelector = ".kasane-teto-media";
 
     let audioRef;
     let mediaEl;
 
-    const audioSrc = `${BASE_URL}/audios/happy-birthday-teto.opus`;
+    const audioSrc = `${ROUTES.ROOT}/audios/happy-birthday-teto.opus`;
     const audioVolume = 0.5;
 
     $: if (audioRef) {

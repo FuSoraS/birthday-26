@@ -3,7 +3,7 @@ import "@/styles/global.css"
 import { NAME, URL } from "astro:env/client"
 import { ClientRouter } from "astro:transitions"
 import "@fontsource/noto-serif-tc/600.css"
-import { BASE_URL } from "@src/config.ts"
+import { ROUTES } from "@/config.ts"
 
 const defaultTitle = `Feliz cumpleaños, ${NAME}`
 const defaultDescription = `Un sitio web de deseos de cumpleaños hecho para ${NAME}.`
@@ -24,14 +24,14 @@ description ??= defaultDescription
 
 		<link
 			rel="preload"
-			href={`${BASE_URL}/fonts/Minecraft-Regular.woff2`}
+			href={`${ROUTES.ROOT}/fonts/Minecraft-Regular.woff2`}
 			as="font"
 			type="font/woff2"
 			crossorigin="anonymous"
 		/>
 		<link
 			rel="preload"
-			href={`${BASE_URL}/imgs/ui/book.avif`}
+			href={`${ROUTES.ROOT}/imgs/ui/book.avif`}
 			as="image"
 			type="image/avif"
 		/>
@@ -55,8 +55,8 @@ description ??= defaultDescription
 		<meta property="twitter:description" content={description} />
 		<!-- <meta property="twitter:image" content={ URL + "img.png" } /> -->
 
-		<link rel="icon" type="image/svg+xml" href={`${BASE_URL}/favicon.svg`} />
-		<link rel="shortcut icon" href={`${BASE_URL}/favicon.png`} type="image/png" />
+		<link rel="icon" type="image/svg+xml" href={`${ROUTES.ROOT}/favicon.svg`} />
+		<link rel="shortcut icon" href={`${ROUTES.ROOT}/favicon.png`} type="image/png" />
 		<slot name="head" />
 		
 		<ClientRouter />

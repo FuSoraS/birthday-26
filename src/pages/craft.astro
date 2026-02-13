@@ -5,19 +5,19 @@ import MineBook from "@/components/ui/Book.astro"
 import AllButtonNav from "@/components/AllButtonNav.astro"
 import ButtonWelcome from "@/components/ButtonWelcome.svelte"
 import { CRAFT_P_1, CRAFT_P_2, CRAFT_P_3, CRAFT_MODAL_1 } from "astro:env/client"
-import { ROUTES, BASE_URL } from "@/config.ts"
+import { ROUTES } from "@/config.ts"
 import ButtonModal from "@/components/ButtonModal.astro"
 import Light from "@/components/ui/Light.astro"
 import ButtonCraft from "@/components/ui/ButtonCraft.astro"
 ---
 
 <Layout>
-    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-inside.avif`} as="image" type="image/avif" slot="head" />
-    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-border.png`} as="image" type="image/png" slot="head" />
-    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-inside-hover.avif`} as="image" type="image/avif" slot="head" />
-    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-border-hover.png`} as="image" type="image/png" slot="head" />
-    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-inside-active.avif`} as="image" type="image/avif" slot="head" />
-    <link rel="preload" href={`${BASE_URL}/imgs/ui/button-border-active.png`} as="image" type="image/png" slot="head" />
+    <link rel="preload" href={`${ROUTES.ROOT}/imgs/ui/button-inside.avif`} as="image" type="image/avif" slot="head" />
+    <link rel="preload" href={`${ROUTES.ROOT}/imgs/ui/button-border.png`} as="image" type="image/png" slot="head" />
+    <link rel="preload" href={`${ROUTES.ROOT}/imgs/ui/button-inside-hover.avif`} as="image" type="image/avif" slot="head" />
+    <link rel="preload" href={`${ROUTES.ROOT}/imgs/ui/button-border-hover.png`} as="image" type="image/png" slot="head" />
+    <link rel="preload" href={`${ROUTES.ROOT}/imgs/ui/button-inside-active.avif`} as="image" type="image/avif" slot="head" />
+    <link rel="preload" href={`${ROUTES.ROOT}/imgs/ui/button-border-active.png`} as="image" type="image/png" slot="head" />
     
     <div class="hidden">
 		<ButtonWelcome client:load src="" transition:name="media-player" transition:persist />

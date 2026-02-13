@@ -1,14 +1,14 @@
 <script>
     import '@/styles/button-welcome.css';
     import { NAME } from 'astro:env/client';
-    import { BASE_URL } from '@src/config.ts';
+    import { ROUTES } from '@/config.ts';
 
     export let src = '';
 
     let audioPlayed = false;
     let audioRef;
 
-    const audioSrc = `${BASE_URL}/audios/ado-elf-off-vocal.opus`;
+    const audioSrc = `${ROUTES.ROOT}/audios/ado-elf-off-vocal.opus`;
     const audioVolume = 0.3;
 
     $: if (audioRef) {
