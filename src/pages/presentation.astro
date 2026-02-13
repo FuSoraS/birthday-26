@@ -6,26 +6,34 @@ import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonWelcome from "@components/ButtonWelcome.svelte"
 import CardIcon from "@components/IconCircle.astro"
 import Text from "@components/ClickableText.astro"
-import { NAME } from "astro:env/client";
-import { ROUTES, BASE_URL } from "@src/config.ts"
+import { ROUTES } from "@src/config.ts"
+import { NAME, PRESENTATION_TITLE, PRESENTATION_P_1, PRESENTATION_P_2 } from "astro:env/client";
 ---
  
 <Layout title="Presentación">
   <div class="hidden">
       <ButtonWelcome client:load src="" transition:name="media-player" transition:persist />
   </div>
-  <Body>
+  <Body gap="gap-5">
     <section class="flex justify-center gap-2">
       <CardIcon active={true}>
         <Text text={NAME} />
       </CardIcon>
     </section>
-    <LetterCard title="Hola">
-        Presentamos nuestra primera pagina
-        <ol class="list-decimal list-inside">
-          <li>Si ves círculos que parpadean, puedes hacer clic en ellos.</li>
-        </ol>
+    <LetterCard title={PRESENTATION_TITLE}>
+        <p>{PRESENTATION_P_1}</p>
+        <p>{PRESENTATION_P_2}</p>
+        <p>Arriba vas a tener regalos que puedes abrir.</p>
     </LetterCard>
-    <AllButtonNav src1={BASE_URL} src2={ROUTES.MUSIC} />
+    <AllButtonNav src1={ROUTES.ROOT} src2={ROUTES.MUSIC} />
   </Body>
 </Layout>
+<style>
+  p {
+    margin-block: 1lh;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+</style>

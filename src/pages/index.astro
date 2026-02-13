@@ -6,10 +6,9 @@ import { ROUTES } from "@src/config.ts";
 ---
 
 <Layout title="Inicio" description="Sorpresa">
-<ButtonWelcome client:load src={ROUTES.PRESENTATION} transition:name="media-player" transition:persist >
-	<div>
-		<AnimationHome />
-	</div>
-</ButtonWelcome>
-
+	<ButtonWelcome client:load src={ROUTES.PRESENTATION} transition:name="media-player" transition:persist >
+		<div>
+			<AnimationHome />
+		</div>
+	</ButtonWelcome>
 </Layout>

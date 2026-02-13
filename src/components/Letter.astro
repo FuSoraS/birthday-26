@@ -1,7 +1,7 @@
 ---
-import { NAME, LETTER_HEADER_1, LETTER_HEADER_2 } from "astro:env/client";
+import { NAME, LETTER_HEADER_1, LETTER_HEADER_2, LETTER_P_1 } from "astro:env/client";
 ---
-<div transition:name="letter-card">
+<div>
 
     <div class="carta-container">
         <!-- Solapa triangular -->
@@ -34,9 +34,7 @@ import { NAME, LETTER_HEADER_1, LETTER_HEADER_2 } from "astro:env/client";
             <div class="carta-saludo">Hola { NAME },</div>
 
             <div class="carta-contenido">
-                <p>
-                    [contenido]
-                </p>
+                <p>{LETTER_P_1}</p>
             </div>
 
             <div class="carta-despedida">Con todo mi cariño,</div>

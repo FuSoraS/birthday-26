@@ -6,8 +6,8 @@ import PlayTetoBirthday from "@components/PlayTetoBirthday.svelte"
 import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonModal from "@src/components/ButtonModal.astro"
 import CardMusic from "@components/CardMusic.astro"
-import { MUSIC_TITLE, MUSIC_P_1 } from "astro:env/client"
-import { ROUTES, BASE_URL } from "@src/config.ts"
+import { ROUTES } from "@src/config.ts"
+import { MUSIC_TITLE, MUSIC_P_1, MUSIC_P_2 } from "astro:env/client"
 ---
 
 <Layout>
@@ -21,8 +21,8 @@ import { ROUTES, BASE_URL } from "@src/config.ts"
 					<div class="container-teto">
 					<video 
 						id="teto-video" 
-						src={`${BASE_URL}/videos/kasane-teto.mp4`} 
-						poster={`${BASE_URL}/imgs/kasane-teto.avif`}
+						src={`${ROUTES.ROOT}/videos/kasane-teto.mp4`} 
+						poster={`${ROUTES.ROOT}/imgs/kasane-teto.avif`}
 						muted 
 						class="kasane-teto-media"
 					></video>
@@ -34,8 +34,8 @@ import { ROUTES, BASE_URL } from "@src/config.ts"
 		<CardMusic>
 			<article>
 				<h1 class="text-center text-[1.3rem] mb-3 text-blue-500 font-bold"> { MUSIC_TITLE } </h1>
-				<p>{ MUSIC_P_1 }</p>
-				<p>Segundo parrafo</p>
+				<p>{MUSIC_P_1}</p>
+				<p>{MUSIC_P_2}</p>
 			</article>
 		</CardMusic>
 

@@ -4,7 +4,7 @@ import Body from "@layouts/Body.astro"
 import MineBook from "@components/ui/Book.astro"
 import AllButtonNav from "@components/AllButtonNav.astro"
 import ButtonWelcome from "@components/ButtonWelcome.svelte"
-import { MINE_P_1 } from "astro:env/client"
+import { CRAFT_P_1, CRAFT_P_2, CRAFT_P_3, CRAFT_MODAL_1 } from "astro:env/client"
 import ButtonModal from "@src/components/ButtonModal.astro"
 import { ROUTES, BASE_URL } from "@src/config.ts"
 import Light from "@src/components/ui/Light.astro"
@@ -25,7 +25,7 @@ import ButtonCraft from "@src/components/ui/ButtonCraft.astro"
     <Body gap="gap-8">
         <section class="flex justify-center gap-2">
             <ButtonModal PopoverTarget="modal-page-1" gradient1="#ff9a9e" gradient2="#fad0c4" gradient3="#fad0c4">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio non tempore laudantium nihil eaque asperiores qui corporis ducimus quae earum doloribus atque soluta, quod culpa maxime illum repudiandae dolores excepturi?
+                    {CRAFT_MODAL_1}
                 <Light scale="0.8"/>
                 <button slot="close" popovertarget="modal-page-1" popovertargetaction="hide">
                    <ButtonCraft>
@@ -35,8 +35,22 @@ import ButtonCraft from "@src/components/ui/ButtonCraft.astro"
             </ButtonModal>
         </section>
         <MineBook>
-            { MINE_P_1 }
+            <p class="p-craft-content">{CRAFT_P_1}</p>
+            <p class="p-craft-content">{CRAFT_P_2}</p>
+            <p class="p-craft-content">{CRAFT_P_3}</p>
         </MineBook>
         <AllButtonNav src1={ROUTES.MUSIC} src2={ROUTES.LETTER} />
     </Body>
 </Layout>
+<style>
+    .p-craft-content{
+        margin-block: 1lh;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+</style>
