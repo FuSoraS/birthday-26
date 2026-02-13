@@ -7,7 +7,7 @@ import svelte from '@astrojs/svelte';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://FuSoraS.github.io',
+  site: 'https://fusoras.github.io',
   base: '/birthday-26',
   integrations: [svelte()],
 
