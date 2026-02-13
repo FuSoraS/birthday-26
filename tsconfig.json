@@ -10,17 +10,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@src/*": [
+      "@/*": [
         "src/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
       ],
       "@icons/*": [
         "src/components/icons/*"

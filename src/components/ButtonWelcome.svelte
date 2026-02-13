@@ -1,5 +1,5 @@
 <script>
-    import '@styles/button-welcome.css';
+    import '@/styles/button-welcome.css';
     import { NAME } from 'astro:env/client';
 
     export let src = '';
