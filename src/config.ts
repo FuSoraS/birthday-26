@@ -1,4 +1,5 @@
 export const ROUTES = {
+  ROOT: "/",
   MUSIC: "/music",
   LETTER: "/letter",
   CRAFT: "/craft",
