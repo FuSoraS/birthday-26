@@ -1,5 +1,6 @@
 ---
 import { NAME, LETTER_HEADER_1, LETTER_HEADER_2, LETTER_P_1 } from "astro:env/client";
+import Greeting from "@/components/Greeting.svelte";
 ---
 <div>
 
@@ -28,7 +29,7 @@ import { NAME, LETTER_HEADER_1, LETTER_HEADER_2, LETTER_P_1 } from "astro:env/cl
             <!-- Contenido de la carta -->
             <div class="carta-header">
                 <div class="carta-fecha">{LETTER_HEADER_1}</div>
-                <div class="carta-destinatario">{LETTER_HEADER_2}</div>
+                <div class="carta-destinatario">{LETTER_HEADER_2}, <Greeting/> </div>
             </div>
 
             <div class="carta-saludo">Hola { NAME },</div>

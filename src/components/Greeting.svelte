@@ -12,4 +12,4 @@
     }
 </script>
 
-<h1>{greeting}</h1>
+<span>{greeting}</span>
