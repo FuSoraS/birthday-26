@@ -1,4 +1,6 @@
 ---
+import { MUSIC_HEART } from "astro:env/client"
+
 import Wave from "@/components/Wave.astro";
 import MusicLoader from "@/components/MusicLoader.astro";
 import IconHeartStatic from "@/components/icons/IconHeartStatic.astro";
@@ -15,7 +17,7 @@ import IconHeartStatic from "@/components/icons/IconHeartStatic.astro";
             <i class="text-[#ff416c] mr-2">
                 <IconHeartStatic />
             </i>
-            <span class="text-[#a0a0ff] text-[0.9rem]">Inspiración</span>
+            <span class="text-[#a0a0ff] text-[0.9rem]">{MUSIC_HEART}</span>
         </div>
         <Wave />
     </div>

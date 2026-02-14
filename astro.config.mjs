@@ -29,7 +29,8 @@ export default defineConfig({
         LETTER_P_1: envField.string({ context: 'client', access: 'public', default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }),
         MUSIC_TITLE: envField.string({ context: 'client', access: 'public', default: 'Titulo' }),
         MUSIC_P_1: envField.string({ context: 'client', access: 'public', default: 'Parrafo 1'}),
-        MUSIC_P_2: envField.string({ context: 'client', access: 'public', default: 'Parrafo 2'})
+        MUSIC_P_2: envField.string({ context: 'client', access: 'public', default: 'Parrafo 2'}),
+        MUSIC_HEART: envField.string({ context: 'client', access: 'public', default: 'Inspiración'}),
     }
   }
 });
