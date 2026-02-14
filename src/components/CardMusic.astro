@@ -12,7 +12,7 @@ import IconHeartStatic from "@/components/icons/IconHeartStatic.astro";
     <div class="line"></div>
     <div class="wave-container justify-end">
         <div class="music-stats">
-            <i class="text-[#ff416c] mr-[5px]">
+            <i class="text-[#ff416c] mr-2">
                 <IconHeartStatic />
             </i>
             <span class="text-[#a0a0ff] text-[0.9rem]">Inspiración</span>
@@ -51,6 +51,18 @@ import IconHeartStatic from "@/components/icons/IconHeartStatic.astro";
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+        & i {
+            animation: heart-beat 1s ease-in infinite alternate;
+        }
+    }
+    @keyframes heart-beat {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.3;
+    }
     }
     .music-loader-wrapper {
         position: absolute;
