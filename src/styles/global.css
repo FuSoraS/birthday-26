@@ -8,22 +8,16 @@
   --spacing-7-block: calc(var(--block-size) * 7);
   --spacing-9-block: calc(var(--block-size) * 9);
 
-  --animate-flicker: flicker 1s cubic-bezier(.4, 0, .6, 1) infinite;
+  --animate-flicker: flicker 1s cubic-bezier(.4, 0, .6, 1) infinite alternate;
   @keyframes flicker {
-    0%, 100%{
+    0%{
       background-color: var(--color-pink-200);
     }
-    25%, 75% {
+    50% {
         background-color: var(--color-pink-300);
     }
-    50% {
+    100% {
       background-color: var(--color-pink-400);
-    }
-    60% {
-      background-color: var(--color-pink-400);
-    }
-    70% {
-      background-color: var(--color-pink-300);
     }
   }
 }
@@ -82,13 +76,13 @@
 
 @keyframes svgMaskReveal {
   from {
-    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-balloon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 1a7 7 0 0 1 7 7c0 5.457 -3.028 10 -7 10c-3.9 0 -6.89 -4.379 -6.997 -9.703l-.003 -.297l.004 -.24a7 7 0 0 1 6.996 -6.76zm0 4a1 1 0 0 0 0 2l.117 .007a1 1 0 0 1 .883 .993l.007 .117a1 1 0 0 0 1.993 -.117a3 3 0 0 0 -3 -3z" /><path d="M12 16a1 1 0 0 1 .993 .883l.007 .117v1a3 3 0 0 1 -2.824 2.995l-.176 .005h-3a1 1 0 0 0 -.993 .883l-.007 .117a1 1 0 0 1 -2 0a3 3 0 0 1 2.824 -2.995l.176 -.005h3a1 1 0 0 0 .993 -.883l.007 -.117v-1a1 1 0 0 1 1 -1z" /></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M 0,0 H 24 V 24 H 0 Z" fill="none"/><path d="m 12,1 c 3.865993,0 7,3.1340068 7,7 0,5.457 -3.028,10 -7,10 C 8.1,18 5.11,13.621 5.003,8.297 L 5,8 5.004,7.76 C 5.1333471,3.9895948 8.2273767,0.99993775 12,1 Z"/><path d="m 12,16 a 1,1 0 0 1 0.993,0.883 L 13,17 v 1 a 3,3 0 0 1 -2.824,2.995 L 10,21 H 7 A 1,1 0 0 0 6.007,21.883 L 6,22 A 1,1 0 0 1 4,22 3,3 0 0 1 6.824,19.005 L 7,19 h 3 a 1,1 0 0 0 0.993,-0.883 L 11,18 v -1 a 1,1 0 0 1 1,-1 z"/></svg>');
     mask-size: 0% 0%;
     mask-position: center;
     mask-repeat: no-repeat;
   }
   to {
-    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-balloon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 1a7 7 0 0 1 7 7c0 5.457 -3.028 10 -7 10c-3.9 0 -6.89 -4.379 -6.997 -9.703l-.003 -.297l.004 -.24a7 7 0 0 1 6.996 -6.76zm0 4a1 1 0 0 0 0 2l.117 .007a1 1 0 0 1 .883 .993l.007 .117a1 1 0 0 0 1.993 -.117a3 3 0 0 0 -3 -3z" /><path d="M12 16a1 1 0 0 1 .993 .883l.007 .117v1a3 3 0 0 1 -2.824 2.995l-.176 .005h-3a1 1 0 0 0 -.993 .883l-.007 .117a1 1 0 0 1 -2 0a3 3 0 0 1 2.824 -2.995l.176 -.005h3a1 1 0 0 0 .993 -.883l.007 -.117v-1a1 1 0 0 1 1 -1z" /></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M 0,0 H 24 V 24 H 0 Z" fill="none"/><path d="m 12,1 c 3.865993,0 7,3.1340068 7,7 0,5.457 -3.028,10 -7,10 C 8.1,18 5.11,13.621 5.003,8.297 L 5,8 5.004,7.76 C 5.1333471,3.9895948 8.2273767,0.99993775 12,1 Z"/><path d="m 12,16 a 1,1 0 0 1 0.993,0.883 L 13,17 v 1 a 3,3 0 0 1 -2.824,2.995 L 10,21 H 7 A 1,1 0 0 0 6.007,21.883 L 6,22 A 1,1 0 0 1 4,22 3,3 0 0 1 6.824,19.005 L 7,19 h 3 a 1,1 0 0 0 0.993,-0.883 L 11,18 v -1 a 1,1 0 0 1 1,-1 z"/></svg>');
     mask-size: 700% 700%;
     mask-position: center;
     mask-repeat: no-repeat;
