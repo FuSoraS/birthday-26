@@ -8,6 +8,7 @@
   --spacing-7-block: calc(var(--block-size) * 7);
   --spacing-9-block: calc(var(--block-size) * 9);
 
+  --animate-rainbow: rainbow 10s infinite alternate;
   --animate-flicker: flicker 1s cubic-bezier(.4, 0, .6, 1) infinite alternate;
   @keyframes flicker {
     0%{
@@ -87,4 +88,19 @@
     mask-position: center;
     mask-repeat: no-repeat;
   }
+}
+
+@keyframes rainbow {
+    25% {
+        color: #A2E3C4;
+    }
+    50% {
+        color: #FF69B4;
+    }
+    75% {
+        color: #3A6EA5;
+    }
+    100% {
+        color: #222222;
+    }
 }
