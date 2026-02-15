@@ -8,7 +8,7 @@
     let audioRef;
 
     const audioSrc = "/audios/ado-elf-off-vocal.opus";
-    const audioVolume = 0.3;
+    const audioVolume = 0.2;
 
     $: if (audioRef) {
         audioRef.src = audioSrc;

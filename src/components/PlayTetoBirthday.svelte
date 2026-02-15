@@ -7,7 +7,7 @@
     let mediaEl;
 
     const audioSrc = "/audios/happy-birthday-teto.opus";
-    const audioVolume = 0.5;
+    const audioVolume = 0.8;
 
     $: if (audioRef) {
         audioRef.src = audioSrc;
